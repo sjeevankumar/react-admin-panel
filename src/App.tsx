@@ -8,6 +8,8 @@ import Footer from "./components/footer/Footer"
 import Menu from "./components/menu/Menu"
 import Login from "./pages/login/Login"
 import "./styles/global.scss"
+import User from "./pages/user/User"
+import Product from "./pages/product/Product"
 
 function App() {
   const Layout = () => {
@@ -44,12 +46,20 @@ function App() {
           path: "/products",
           element: <Products />,
         },
+        {
+          path: "/users/:id",
+          element: <User />,
+        },
+        {
+          path: "/products/:id",
+          element: <Product />,
+        },
       ],
     },
     {
-      path: '/login',
-      element:<Login/>
-    }
+      path: "/login",
+      element: <Login />,
+    },
   ])
 
   return <RouterProvider router={router} />
