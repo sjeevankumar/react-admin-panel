@@ -1,5 +1,12 @@
+@import "../../styles/responsive.scss";
+
 .single {
     display: flex;
+
+    @include xl {
+        flex-direction: column;
+        gap: 50px;
+    }
 
     .view {
         flex: 1;
@@ -48,6 +55,10 @@
             margin-top: 50px;
             width: 80%;
             height: 400px;
+
+            @include md {
+                display: none;
+            }
         }
     }
 
@@ -79,9 +90,13 @@
                 }
 
                 div {
-                    min-width: 400px;
+                    min-width: 480px;
                     padding: 15px;
                     background-color: #f45b6810;
+
+                    @include md {
+                        min-width: 250px;
+                    }
 
                     p {
                         margin-bottom: 5px;

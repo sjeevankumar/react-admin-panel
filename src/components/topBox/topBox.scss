@@ -1,6 +1,12 @@
+@import "../../styles/responsive.scss";
+
 .topBox {
     h1 {
         margin-bottom: 20px;
+
+        @include xxl {
+            font-size: 24px;
+        }
     }
     .list {
         .listItem {
@@ -16,21 +22,35 @@
                     height: 40px;
                     border-radius: 50%;
                     object-fit: cover;
+
+                    @include xxl {
+                        display: none;
+                    }
+                    @include lg {
+                        display: block;
+                    }
                 }
-                .userTexts{
+                .userTexts {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
-                    .username{
+                    .username {
                         font-size: 14px;
                         font-weight: 500;
                     }
-                    .email{
+                    .email {
                         font-size: 12px;
+
+                        @include xxl {
+                            display: none;
+                        }
+                        @include lg {
+                            display: block;
+                        }
                     }
                 }
             }
-            .amount{
+            .amount {
                 font-weight: 500;
             }
         }
